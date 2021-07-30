@@ -1,0 +1,36 @@
+// This command will download repository for open jdk
+brew tap adoptopenjdk/openjdk
+
+//installing jdk 11 and 8
+brew install --cask adoptopenjdk11 adoptopenjdk8
+
+//download utility jenv
+brew install jenv
+
+//add these two commands in zshrc
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(jenv init -)"' >> ~/.zshrc
+
+//add our java to jenv 
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+
+//now check versions
+jenv versions
+
+//to set java versions we can use:-
+
+jenv local 1.8
+java -version
+
+jenv local 11
+java -version
+
+// To enable java to maven
+jenv enable-plugin maven
+
+jenv enable-plugin export
+
+echo $JAVA_HOME
+
+Note :- In case if you see changes are not reflecting, Please do restart your terminal.
