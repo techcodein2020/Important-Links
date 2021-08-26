@@ -1,0 +1,26 @@
+INSTALLING WITH SDKMAN :-
+
+1. open a new terminal and enter:
+curl -s https://get.sdkman.io | bash
+
+2. Follow the on-screen instructions to complete installation.
+
+3. Open a new terminal or type the command:
+    $ source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+4. Then install the latest stable version of the framework:
+    $ sdk install micronaut
+
+5. If prompted, make this your default version. After installation is complete 
+it can be tested with:
+    $ mn --version
+
+###############
+
+Creating your first app with cli, run these commands :-
+
+mn create-app hello-world
+
+To run your project in gradle :-
+
+./gradlew run
